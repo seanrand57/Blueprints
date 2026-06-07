@@ -31,6 +31,8 @@ Possible usage patterns:
 ```text
 Blueprints/
   skills/
+    blueprint/
+    imported/
   tools/
   prompts/
   standards/
@@ -50,4 +52,13 @@ Blueprints/
 
 ## Status
 
-This repo is intentionally starting small. The next milestone is a `blueprint` skill that can select and assemble the right standards, prompts, and playbooks for a given project or task.
+This repo now includes the first Blueprints skill plus imported local skill packs from Codex, `.agents`, and project workspaces.
+
+See:
+
+- `docs/imports/README.md` for import sources
+- `docs/imports/imported-skills.md` for the imported skill list
+- `docs/imports/local-repo-inventory.md` for discovered local repos
+- `docs/imports/external-skill-catalog.md` for cataloged upstream OpenAI curated skills
+
+The next milestone is making the `blueprint` skill assemble the right imported skills, standards, prompts, and playbooks for a given project automatically.

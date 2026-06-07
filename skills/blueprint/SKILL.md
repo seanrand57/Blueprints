@@ -28,6 +28,16 @@ Use this skill when a project needs shared guidance from the Blueprints reposito
 - Testing: `playbooks/testing.md`
 - Strategy: `docs/vision.md`
 
+## Imported Skill Packs
+
+When the task needs a more specialized workflow, inspect these imported packs:
+
+- `skills/imported/blueprint-agents/` for engineering, review, TDD, QA, product shaping, writing, and interface-design workflows.
+- `skills/imported/codex-local/` for local Codex skills.
+- `skills/imported/agents-local/` for broader agent platform skills such as Microsoft Foundry.
+
+Use `docs/imports/imported-skills.md` as the quick index before reading a full skill. Use `docs/imports/external-skill-catalog.md` to identify upstream curated skills that are available locally but intentionally not vendored here.
+
 ## Output
 
 Keep the final guidance short and task-specific. Avoid dumping the entire repository into context.
