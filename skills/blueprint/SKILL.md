@@ -5,7 +5,7 @@ description: Compose reusable Blueprints guidance for agent coding, review, test
 
 # Blueprint Skill
 
-Use this skill when a project needs shared guidance from the Blueprints repository.
+Use this skill when a project needs shared guidance from the Blueprints repository. This is the front door. For broad or ambiguous work, route through `blueprint-orchestrator`.
 
 ## Workflow
 
@@ -16,10 +16,15 @@ Use this skill when a project needs shared guidance from the Blueprints reposito
    - documentation
    - project setup
    - tool configuration
+   - security
+   - release
+   - product/spec
+   - design/prototype
 2. Load the smallest relevant set of files from this repo.
-3. Combine shared Blueprints guidance with local project instructions.
-4. Prefer local project rules when they conflict with shared defaults.
-5. Report which blueprints were used.
+3. Check `registry/skills.json` for matching skills.
+4. Combine shared Blueprints guidance with local project instructions.
+5. Prefer local project rules when they conflict with shared defaults.
+6. Report which blueprints were used.
 
 ## Recommended Files
 
@@ -27,6 +32,10 @@ Use this skill when a project needs shared guidance from the Blueprints reposito
 - Review: `playbooks/pr-review.md`, `prompts/reviewer.md`
 - Testing: `playbooks/testing.md`
 - Strategy: `docs/vision.md`
+- Orchestration: `skills/blueprint-orchestrator/SKILL.md`, `playbooks/autonomous-team.md`
+- Repo onboarding: `skills/blueprint-audit/SKILL.md`, `skills/blueprint-install/SKILL.md`, `playbooks/repo-onboarding.md`
+- Security: `skills/security-review/SKILL.md`, `playbooks/security-review.md`
+- Release: `skills/release-manager/SKILL.md`
 
 ## Imported Skill Packs
 

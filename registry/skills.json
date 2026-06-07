@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "updated": "2026-06-06",
+  "skills": [
+    {
+      "name": "blueprint",
+      "path": "skills/blueprint/SKILL.md",
+      "category": "orchestration",
+      "maturity": "core",
+      "tags": ["router", "context", "composition"],
+      "triggers": ["blueprint", "which skills", "shared guidance", "compose guidance"],
+      "depends_on": []
+    },
+    {
+      "name": "blueprint-audit",
+      "path": "skills/blueprint-audit/SKILL.md",
+      "category": "orchestration",
+      "maturity": "core",
+      "tags": ["repo-audit", "onboarding", "gap-analysis"],
+      "triggers": ["audit this repo", "which blueprints apply", "onboard this project"],
+      "depends_on": ["blueprint"]
+    },
+    {
+      "name": "blueprint-install",
+      "path": "skills/blueprint-install/SKILL.md",
+      "category": "orchestration",
+      "maturity": "core",
+      "tags": ["install", "sync", "templates", "agent-instructions"],
+      "triggers": ["install blueprints", "sync blueprints", "add blueprint to this repo"],
+      "depends_on": ["blueprint"]
+    },
+    {
+      "name": "blueprint-orchestrator",
+      "path": "skills/blueprint-orchestrator/SKILL.md",
+      "category": "orchestration",
+      "maturity": "core",
+      "tags": ["planning", "dispatch", "multi-agent", "execution-recipe"],
+      "triggers": ["orchestrate", "super repo", "autonomous team", "run the right skills"],
+      "depends_on": ["blueprint", "blueprint-audit"]
+    },
+    {
+      "name": "diagnose",
+      "path": "skills/imported/blueprint-agents/diagnose/SKILL.md",
+      "category": "engineering",
+      "maturity": "ready",
+      "tags": ["debugging", "reproduction", "instrumentation"],
+      "triggers": ["diagnose", "debug", "broken", "failing", "performance regression"],
+      "depends_on": []
+    },
+    {
+      "name": "tdd",
+      "path": "skills/imported/blueprint-agents/tdd/SKILL.md",
+      "category": "engineering",
+      "maturity": "ready",
+      "tags": ["testing", "red-green-refactor", "implementation"],
+      "triggers": ["TDD", "test first", "red green refactor"],
+      "depends_on": []
+    },
+    {
+      "name": "review",
+      "path": "skills/imported/blueprint-agents/review/SKILL.md",
+      "category": "engineering",
+      "maturity": "ready",
+      "tags": ["review", "standards", "spec"],
+      "triggers": ["review", "review since", "PR review", "branch review"],
+      "depends_on": []
+    },
+    {
+      "name": "qa",
+      "path": "skills/imported/blueprint-agents/qa/SKILL.md",
+      "category": "quality",
+      "maturity": "ready",
+      "tags": ["qa", "bug-reporting", "issues"],
+      "triggers": ["QA session", "report bugs", "file issues"],
+      "depends_on": ["triage"]
+    },
+    {
+      "name": "triage",
+      "path": "skills/imported/blueprint-agents/triage/SKILL.md",
+      "category": "product",
+      "maturity": "ready",
+      "tags": ["issues", "state-machine", "workflow"],
+      "triggers": ["triage", "incoming bugs", "ready for agent"],
+      "depends_on": []
+    },
+    {
+      "name": "to-prd",
+      "path": "skills/imported/blueprint-agents/to-prd/SKILL.md",
+      "category": "product",
+      "maturity": "ready",
+      "tags": ["prd", "spec", "product"],
+      "triggers": ["make a PRD", "turn this into a PRD"],
+      "depends_on": []
+    },
+    {
+      "name": "to-issues",
+      "path": "skills/imported/blueprint-agents/to-issues/SKILL.md",
+      "category": "product",
+      "maturity": "ready",
+      "tags": ["issues", "planning", "vertical-slices"],
+      "triggers": ["break into issues", "create tickets", "implementation tickets"],
+      "depends_on": ["to-prd"]
+    },
+    {
+      "name": "frontend-design",
+      "path": "skills/imported/blueprint-agents/frontend-design/SKILL.md",
+      "category": "design",
+      "maturity": "ready",
+      "tags": ["frontend", "ui", "visual-design"],
+      "triggers": ["frontend", "website", "dashboard", "make UI"],
+      "depends_on": []
+    },
+    {
+      "name": "prototype",
+      "path": "skills/imported/blueprint-agents/prototype/SKILL.md",
+      "category": "design",
+      "maturity": "ready",
+      "tags": ["prototype", "state-machine", "mockup"],
+      "triggers": ["prototype", "try a few designs", "let me play with it"],
+      "depends_on": []
+    },
+    {
+      "name": "make-interfaces-feel-better",
+      "path": "skills/imported/blueprint-agents/make-interfaces-feel-better/SKILL.md",
+      "category": "design",
+      "maturity": "ready",
+      "tags": ["ui-polish", "animation", "typography"],
+      "triggers": ["polish", "feels off", "make it feel better"],
+      "depends_on": ["frontend-design"]
+    },
+    {
+      "name": "security-review",
+      "path": "skills/security-review/SKILL.md",
+      "category": "security",
+      "maturity": "core",
+      "tags": ["security", "secrets", "auth", "public-repo"],
+      "triggers": ["security review", "public repo safe", "secret scan", "auth risk"],
+      "depends_on": []
+    },
+    {
+      "name": "release-manager",
+      "path": "skills/release-manager/SKILL.md",
+      "category": "delivery",
+      "maturity": "core",
+      "tags": ["release", "changelog", "versioning", "rollback"],
+      "triggers": ["release", "ship it", "changelog", "version bump"],
+      "depends_on": ["review", "qa"]
+    }
+  ]
+}

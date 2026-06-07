@@ -30,8 +30,12 @@ Possible usage patterns:
 
 ```text
 Blueprints/
+  registry/
   skills/
     blueprint/
+    blueprint-audit/
+    blueprint-install/
+    blueprint-orchestrator/
     imported/
   tools/
   prompts/
@@ -50,9 +54,36 @@ Blueprints/
 4. Version changes through pull requests when the impact is broad.
 5. Capture what works in real projects, then refine it here.
 
+## Superpowers
+
+- `blueprint` selects the smallest useful shared guidance.
+- `blueprint-orchestrator` turns broad goals into an execution recipe.
+- `blueprint-audit` inspects a repo and recommends which Blueprints apply.
+- `blueprint-install` installs shared guidance into another project.
+- `security-review` checks public-repo, credential, auth, and data exposure risk.
+- `release-manager` prepares changelogs, verification, deployment, and rollback notes.
+
+## Scripts
+
+```bash
+scripts/validate-registry.py
+scripts/list-skills.py
+scripts/audit-blueprints.py /path/to/project
+scripts/install-blueprints.sh /path/to/project reference
+scripts/install-blueprints.sh /path/to/project copy
+```
+
+## How Agents Should Use This Repo
+
+1. Start with `skills/blueprint/SKILL.md`.
+2. Use `registry/skills.json` to find candidate skills.
+3. Route broad tasks through `skills/blueprint-orchestrator/SKILL.md`.
+4. Use `skills/blueprint-audit/SKILL.md` before installing into an unfamiliar repo.
+5. Use `skills/security-review/SKILL.md` before publishing sensitive changes.
+
 ## Status
 
-This repo now includes the first Blueprints skill plus imported local skill packs from Codex, `.agents`, and project workspaces.
+This repo now includes native orchestration skills plus imported local skill packs from Codex, `.agents`, and project workspaces.
 
 See:
 
@@ -61,4 +92,4 @@ See:
 - `docs/imports/local-repo-inventory.md` for discovered local repos
 - `docs/imports/external-skill-catalog.md` for cataloged upstream OpenAI curated skills
 
-The next milestone is making the `blueprint` skill assemble the right imported skills, standards, prompts, and playbooks for a given project automatically.
+The next milestone is adding automated skill validation examples so the registry and skills can be regression-tested as they evolve.
